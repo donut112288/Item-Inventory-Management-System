@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author JunMeng
+ */
+public class Supplier {
+    
+    public static final int MAX_SUPCOUNT = 4;
+    private static int supCount = 0;
+    private final String supplierCode;
+
+
+    public Supplier() {
+        if (supCount < MAX_SUPCOUNT) {
+            supCount++;  
+            this.supplierCode = "SUP" + supCount;  
+        } else {
+            throw new IllegalStateException("Cannot create more than " + MAX_SUPCOUNT + " suppliers.");
+        }
+    }
+
+    
+    public String getSupplierCode() {
+        return supplierCode;
+    }
+}
+
